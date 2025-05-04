@@ -1,1 +1,2 @@
 pytest
+PyPDF2>=3.0.0
