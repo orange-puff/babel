@@ -1,6 +1,5 @@
 import unittest
 from unittest.mock import Mock, patch
-import os
 from src.pdf_reader import PDFReader
 
 
@@ -47,7 +46,7 @@ class TestPDFReader(unittest.TestCase):
 
     def test_get_all_pages_text(self):
         """Test getting text from all pages"""
-        expected = {1: "Page 1 content", 2: "Page 2 content"}
+        expected = ["Page 1 content", "Page 2 content"]
         self.assertEqual(self.pdf_reader.get_all_pages_text(), expected)
 
 
