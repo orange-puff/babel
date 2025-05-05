@@ -1,5 +1,5 @@
-from typing import Dict
-from PyPDF2 import PdfReader
+from typing import List
+from pypdf import PdfReader
 import os.path
 
 
@@ -61,10 +61,10 @@ class PDFReader:
 
         return self._reader.pages[page_num].extract_text()
 
-    def get_all_pages_text(self) -> Dict[int, str]:
+    def get_all_pages_text(self) -> List[str]:
         """Get text content from all pages in the PDF.
 
         Returns:
             Dict[int, str]: Dictionary mapping page numbers (1-based) to their text content
         """
-        return {i + 1: self.get_page_text(i) for i in range(self._num_pages)}
+        return [self.get_page_text(i) for i in range(self._num_pages)]

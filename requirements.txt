@@ -1,2 +1,5 @@
 pytest
-PyPDF2>=3.0.0
+pypdf
+openai
+numpy
+python-dotenv
